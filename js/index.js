@@ -200,7 +200,8 @@ $(function() {
         // タッチ開始時の座標を記録
         touchStartX = Math.floor(downPoint[0]);
         touchStartY = Math.floor(downPoint[1]);
-
+        console.log("onMouseDown_touchStartX:" + touchStartX);
+        console.log("onMouseDown_touchStartY:" + touchStartY);
     };
     canvas.addEventListener('mousedown', onMouseDown, false);
     canvas.addEventListener('touchstart', onMouseDown, false);
@@ -218,10 +219,13 @@ $(function() {
             // 移動後の座標
             let currentX = downPoint[0];
             let currentY = downPoint[1];
-
+            console.log("onMouseMove_currentX:" + currentX);
+            console.log("onMouseMove_currentY:" + currentY);
             // マウスダウン（タッチ）開始座標を更新
+            /*
             touchX = currentX;
             touchY = currentY;
+            */
         }
     };
     canvas.addEventListener('mousemove', onMouseMove, false);
@@ -238,7 +242,8 @@ $(function() {
         let downPoint = sps.getTouchPoint(e, canvasPosition.top, canvasPosition.left);   // マウスダウン（orタッチ）座標
         let touchEndX = Math.floor(downPoint[0]);
         let touchEndY = Math.floor(downPoint[1]);
-
+        console.log("onMouseUp_touchEndX:" + touchEndX);
+        console.log("onMouseUp_touchEndY:" + touchEndY);
         if (Math.abs(touchStartX - touchEndX) < 3 && Math.abs(touchStartY - touchEndY) < 3) {
             // クリック判定（タッチ開始時座標と終了座標が僅差であればクリックとみなす）
             let innerGridTouch = sps.getNearestGridPoint([touchX, touchY], gridInfo);
