@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+@-ms-viewport { width: auto; initial-scale: 1; user-zoom: fixed; }
+@viewport { width: device-width; initial-scale: 1; user-zoom: fixed; }
+
+html {
+    touch-action: none;
+    -ms-touch-action: none;
+}
+.refuseusel {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -ms-content-zooming: none;
+    -ms-overflow-style: none;
+    /* */
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+body {
+    font-family: Osaka-等幅, 'ＭＳ ゴシック', 'MS Gothic', monospace;
+    padding: 0;
+}
+
+#stage_0 {
+    position: relative;
+    width: 1280px;
+    height: 960px;
+    margin: 0 auto;
+    /* overflow: hidden; */
+}
+
+#stage_1 {
+    position: relative;
+    width: 1278px;
+    height: 958px;
+    border: 1px solid rgba(0, 0, 0, 0.22);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.22);
+}
+
+#Canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#Mycanvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2144480000;
+    pointer-events: none;
+}

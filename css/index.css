@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+#appCanvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.question {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 70%;
+    height: auto;
+}
+
+.cmflame{
+    position: absolute;
+    top: 15%;
+    left: 5.05%;
+    width: 10%;
+    height: auto;
+}
+
+.cm1{
+    position: absolute;
+    top: 13%;
+    left: 8.5%;
+    width: 5%;
+    height: auto;
+}
+
+.cm2{
+    position: absolute;
+    top: 21%;
+    left: 1%;
+    width: 5%;
+    height: auto;
+}
+
+.btn {
+    position: absolute;
+    border: none;
+    z-index: 2144480000;
+}
+.btn:focus {
+    outline: none;
+}
+#drawLine.btn {
+    background: center center / auto 98% no-repeat url("../img/draw_line_normal.png");
+}
+#drawLine.btn.active {
+    background: center center / auto 98% no-repeat url("../img/draw_line_on.png");
+}
+#restart.btn {
+    background: center center / auto 98% no-repeat url("../img/redo.png");
+}
