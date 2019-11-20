@@ -244,7 +244,7 @@ $(function() {
         let touchEndY = Math.floor(downPoint[1]);
         console.log("onMouseUp_touchEndX:" + touchEndX);
         console.log("onMouseUp_touchEndY:" + touchEndY);
-        if (Math.abs(touchStartX - touchEndX) < (cellSize/2)*scale && Math.abs(touchStartY - touchEndY) < (cellSize/2)*scale) {
+        if (Math.abs(touchStartX - touchEndX) < cellSize/2 && Math.abs(touchStartY - touchEndY) < cellSize/2) {
             // クリック判定（タッチ開始時座標と終了座標が僅差であればクリックとみなす）
             let innerGridTouch = sps.getNearestGridPoint([touchX, touchY], gridInfo);
             if (null !== innerGridTouch) { //グリッド内部をタッチしているか判定
