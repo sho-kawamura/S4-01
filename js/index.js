@@ -206,6 +206,28 @@ $(function() {
     canvas.addEventListener('touchstart', onMouseDown, false);
 
     /**
+     * マウスダウン（タッチ移動）中の処理
+     * @param e
+     */
+    let onMouseMove = function (e) {
+        e.preventDefault(); // デフォルトイベントをキャンセル
+
+        let downPoint = sps.getTouchPoint(e, canvasPosition.top, canvasPosition.left);   // マウスダウン（orタッチ）座標
+
+        if (touched) {
+            // 移動後の座標
+            let currentX = downPoint[0];
+            let currentY = downPoint[1];
+
+            // マウスダウン（タッチ）開始座標を更新
+            touchX = currentX;
+            touchY = currentY;
+        }
+    };
+    canvas.addEventListener('mousemove', onMouseMove, false);
+    canvas.addEventListener('touchmove', onMouseMove, false);
+
+    /**
      * マウスアップ（タッチ終了）時の処理
      * @param e 操作イベント
      */
